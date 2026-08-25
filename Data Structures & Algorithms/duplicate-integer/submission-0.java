@@ -1,0 +1,14 @@
+class Solution {
+    public boolean hasDuplicate(int[] nums) {
+        if(nums == null) return false;
+        Map<Integer, Integer> counts = new HashMap();
+        for(int i=0; i< nums.length;i++){
+            if(counts.containsKey(nums[i])){
+                return true;
+            } else{
+                counts.put(nums[i],1);
+            }
+        }
+        return false;
+    }
+}
